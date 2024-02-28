@@ -8,7 +8,7 @@
 struct News: Identifiable, Decodable {
     let id: Int
     let title: String
-    let date: String
+    let date: Double?
 }
 
 struct NewsResponse: Decodable {

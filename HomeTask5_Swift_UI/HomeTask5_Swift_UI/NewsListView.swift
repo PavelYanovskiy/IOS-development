@@ -16,9 +16,11 @@ struct NewsListView: View {
             VStack(alignment: .leading) {
                 Text(newsItem.title)
                     .font(.headline)
-                Text(newsItem.date)
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
+                if let date = newsItem.date {
+                    Text("\(date)") // Преобразование Double? в String здесь
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                }
             }
         }
         .onAppear {
